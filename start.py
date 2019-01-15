@@ -1,4 +1,4 @@
-# Script de arranque del escenario
+# Script de descarga,descompresión y arranque del escenario
 
 import subprocess
 
