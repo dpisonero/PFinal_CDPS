@@ -3,10 +3,13 @@
 from subprocess import call
 
 # Instalamos nodejs y npm en los servidores
+call("sudo lxc-attach --clear-env -n s1 -- apt update", shell=True)
 call("sudo lxc-attach --clear-env -n s1 -- apt -y install nodejs", shell=True)
 call("sudo lxc-attach --clear-env -n s1 -- apt -y install npm", shell=True)
+call("sudo lxc-attach --clear-env -n s2 -- apt update", shell=True)
 call("sudo lxc-attach --clear-env -n s2 -- apt -y install nodejs", shell=True)
 call("sudo lxc-attach --clear-env -n s2 -- apt -y install npm", shell=True)
+call("sudo lxc-attach --clear-env -n s3 -- apt update", shell=True)
 call("sudo lxc-attach --clear-env -n s3 -- apt -y install nodejs", shell=True)
 call("sudo lxc-attach --clear-env -n s3 -- apt -y install npm", shell=True)
 
